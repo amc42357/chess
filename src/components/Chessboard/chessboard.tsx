@@ -1,8 +1,15 @@
 import Tile from "../Tile/tile";
 import "./chessboard.css"
 
-export default function Chessboard() {
+import { createBoard } from "../../controllers/boardController";
 
-    let board=Array(64).fill(<Tile></Tile>);
-    return <div id="chessboard">{board}</div>
+
+
+export default function Chessboard() {
+    
+    let board=createBoard()
+    
+    let displayBoard=board.map((v,i)=>(<Tile key={i} img={v?.img}></Tile>));
+
+    return <div id="chessboard">{displayBoard}</div>
 }
