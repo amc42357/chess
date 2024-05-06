@@ -20,5 +20,5 @@
 .tile:nth-child(40) ~ span:nth-child(-2n+47),
 .tile:nth-child(48) ~ span:nth-child(-2n+56),
 .tile:nth-child(56) ~ span:nth-child(-2n+63) {
-    background-color: #779556;
+    background-color: #779556 !important;
 }
