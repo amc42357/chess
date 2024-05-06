@@ -1,0 +1,24 @@
+#chessboard{
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    width: 800px;
+    height: 800px;
+    background-color: #779556;
+}
+
+#chessboard .tile{
+    width: 100px;
+    height: 100px;
+    background-color: white;
+}
+
+.tile:nth-child(-2n+8), 
+.tile:nth-child(8) ~ span:nth-child(-2n+15), 
+.tile:nth-child(16) ~ span:nth-child(-2n+24),
+.tile:nth-child(24) ~ span:nth-child(-2n+31),
+.tile:nth-child(32) ~ span:nth-child(-2n+40),
+.tile:nth-child(40) ~ span:nth-child(-2n+47),
+.tile:nth-child(48) ~ span:nth-child(-2n+56),
+.tile:nth-child(56) ~ span:nth-child(-2n+63) {
+    background-color: #779556;
+}
